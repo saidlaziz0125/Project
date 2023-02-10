@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+th.th-tab {
+    background-color: #364CE6;
+    color: white;
+}
+
+.set-td {
+    text-align: center;
+    font-size: 25px;
+}

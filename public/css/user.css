@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none !important;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-image: url("../img/profile.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.off-li {
+    width: 113%;
+    transform: translateX(-32px);
+    padding: 10px 10px;
+    transition: 0.5s linear;
+}
+
+.off-li:hover {
+    background: linear-gradient(to left, #9c9c9c, white);
+}
+/* 
+.off-li i {
+    font-size: 25px;
+    padding-right: 10px;
+    color: rgb(13, 110, 253);
+} */
+
+
+.off-li img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.off-a {
+    color: black;
+    font-size: 20px;
+}

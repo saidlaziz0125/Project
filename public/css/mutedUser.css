@@ -1,0 +1,76 @@
+.userList {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+h4 {
+    width: 25%;
+    display: block;
+    margin: auto;
+    border-radius:  7px;
+    text-transform: uppercase;
+}
+
+.card1 {
+    display: flex;
+    width: 250px;
+    min-height: 210px;
+    margin: 10px;
+    align-items: center;
+    flex-direction: column;
+    background: #ffc10780;
+    padding: 10px;
+    position: relative;
+    border-radius: 2px 21px 3px 3px;
+    transition: all 0.5s linear;
+}
+
+.contener1 {
+    width: 70px;
+    height: 70px;
+    background-image: linear-gradient(#4b4b4b50, #4b4b4b70, #4b4b4b90), url("../img/profile.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+.contener_txt1 {
+    margin-top: 20px;
+}
+
+.name1 {
+    text-align: center;
+    margin: auto;
+    font-size: 18px;
+    padding: 2px 0;
+}
+
+.add1 {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+}
+
+.user-icon {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.del-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #ff353586;
+}
+

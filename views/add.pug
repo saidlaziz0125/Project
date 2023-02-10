@@ -1,0 +1,39 @@
+include links 
+link(rel="stylesheet", href="/css/add.css")
+body 
+    p.text-center= txt
+    .container.mt-5
+        if(datas)
+            form.add-form(method="post")  
+                .mb-3
+                    input.form-control(type='text' placeholder='Kelgan sut' name='kelganSut' value=datas.kelganSut)
+                .mb-3
+                    input.form-control(type='text' placeholder='Jir' name='jir' value=datas.jir)
+                .mb-3
+                    input.form-control(type='text' placeholder='Kim olib keldi' name='kimOlibKeldi' value=datas.kimOlibKeldi)
+                .mb-3
+                    input.form-control(type='text' placeholder='Perechesleniya pul o\'tdi' name='perePul' value=datas.perePul)
+                .mb-3
+                    input.form-control(type='text' placeholder='Naqd berildi' name='naqdPul' value=datas.naqdPul)
+                .mb-3
+                    input.form-control(type='text' placeholder='Sut narxi' name='sutNarxi' value=datas.sutNarxi)
+                .mb-3 
+                    button.btn.form-btn.btn-primary(type="submit") Tahrirlash
+        else 
+            form.add-form(method="post")  
+                .mb-3
+                    input.form-control(type='text' placeholder='Ferma nomi' name='ferma')
+                .mb-3
+                    input.form-control(type='text' placeholder='Kelgan sut' name='kelganSut')
+                .mb-3
+                    input.form-control(type='text' placeholder='Jir' name='jir')
+                .mb-3
+                    input.form-control(type='text' placeholder='Kim olib keldi' name='kimOlibKeldi')
+                .mb-3
+                    input.form-control(type='text' placeholder='Perechesleniya pul o\'tdi' name='perePul')
+                .mb-3
+                    input.form-control(type='text' placeholder='Naqd berildi' name='naqdPul')
+                .mb-3
+                    input.form-control(type='text' placeholder='Sut narxi' name='sutNarxi')
+                .mb-3 
+                    button.btn.form-btn.btn-primary(type="submit") Qo'shish

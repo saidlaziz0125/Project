@@ -1,0 +1,11 @@
+link(rel="stylesheet", href="../css/chart.css")
+script(src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js")
+script(src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js")
+script(src="../js/chart.js")
+//- chart body
+form(action="/note") 
+    select.form-select.w-50(class="ferma_nomi")
+        each db in chartData 
+            option(value=db.ferma)= db.ferma 
+    div
+        canvas#myChart  

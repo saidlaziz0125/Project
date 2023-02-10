@@ -1,0 +1,18 @@
+include links 
+link(rel="stylesheet", href="/css/admin.css")
+body  
+    .container
+        form(method="POST")
+            img(src='/img/3.png' alt='Profile-pic')
+            br
+            if(txt)
+                small.error_small=txt
+            .input-box
+                ion-icon(name="person")
+                input.py-3(type="text" placeholder="Username" name="login")
+            .input-box
+                i.fa-solid.fa-lock
+                input.py-3(type="password" placeholder="Password" name="password")
+            .btn 
+                button.submit_btn(type="submit") 
+                    ion-icon(name="exit")

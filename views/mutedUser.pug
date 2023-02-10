@@ -1,0 +1,22 @@
+link(rel="stylesheet", href="../css/mutedUser.css")
+//- mutedUser body
+h4.text-light.text-center.mt-2.mb-4.bg-danger.py-2 Deletion Users
+.userList
+    if(mutedUser.length >= 1)
+        each db in mutedUser
+            div.card1
+                .contener1 
+                .contener_txt1
+                    .name1.h5=db.username+" "+db.lastname
+                    a(href="/mutedUser/delete/"+db.id) 
+                        img.del-icon(src="../img/remove.png", alt=""  data-bs-toggle="tooltip" data-bs-placement="right" title=`Delete ${db.username+" "+db.lastname} from outcast`)
+                    .add1 
+                        small.text-secondary="email: "+db.email
+                        br
+                        small.text-secondary="login: "+db.login
+                        br    
+                        small.text-secondary="region: "+db.region
+                    a(href="/returnUser/"+db.id)  
+                            img.user-icon(src="../img/follow.png", alt="" data-bs-toggle="tooltip" data-bs-placement="right" title=`Tiklash : ${db.username+" "+db.lastname} Foydalanuvchi tiklanishi bilan uning barcha kundaligi qayta tiklanadi !!!`) 
+    else 
+        small.d-block.text-center.text-secondary(style="margin-top: 250px; margin-left: 550px") Not found deletion users...

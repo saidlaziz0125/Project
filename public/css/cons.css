@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    list-style: none;
+    list-style-position: outside;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.bar {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    background: white;
+    border: 0.5px solid #9c9c9c67;
+    z-index: 1000;
+    display: flex;
+    box-shadow: 0 0 5px #9c9c9c8c;
+}
+
+.menu-icons {
+    width: 70px;
+    height: 100%;
+}
+
+
+.ul-icon {
+    width: 100%;
+}
+
+.li-icon {
+    padding: 15px 10px ;
+   transform: translateX(-20px);
+}
+
+.a-icon ion-icon, .a-icon i {
+    font-size: 25px;
+}
+
+
+.a-icon img {
+    width: 30px;
+    height: 30px;
+
+}
+
+
+.menu-list {
+    width: 0;
+    height: 80%;
+    overflow: hidden;
+    transform: translateY(7px);
+    transition: 0.5s ease;
+}
+
+
+.ul-text {
+    width: 200px;
+}
+
+.li-text {
+    width: 200px;
+    transform: translateX(-32px);
+    padding: 15px 5px;
+}
+
+.li1 {
+    padding-bottom: 5px;
+}
+
+.li1 a {
+    color: green;
+    font-family: system-ui;
+}
+
+.a-text {
+     font-size: 20px;
+}
+
+
+
+.toogleB {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+
+.section {
+    width: 95%;
+    padding: 10px;
+    background: whitesmoke;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    overflow-y: auto;
+}
+
+/* ///////////////////////////////////////////////////////////////////////// */
+

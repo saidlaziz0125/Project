@@ -1,0 +1,45 @@
+link(rel="stylesheet", href="../css/mutedData.css")
+//- mutedNote body
+h4.text-light.text-center.mt-2.mb-4.bg-danger.py-2 Deletion Notes
+.noteList
+    if(mutedNote.length >= 1)
+        table.bg-secondary.table.mt-2(style='width: 1366px')
+            thead
+                tr 
+                    th.border.th-tab(scope='col') Sana 
+                    th.border.th-tab(scope='col') ostatka qarz
+                    th.border.th-tab(scope='col') Kelgan sut
+                    th.border.th-tab(scope='col') Sut narxi
+                    th.border.th-tab(scope='col') Jir
+                    th.border.th-tab(scope='col') Kim Olib keldi
+                    th.border.th-tab(scope='col') perech. pul
+                    th.border.th-tab(scope='col') Naqd pul
+                    th.border.th-tab(scope='col') perech. litr
+                    th.border.th-tab(scope='col') Naqd litr
+                    th.border.th-tab(scope='col') Ostatka
+                    th.border.th-tab(scope='col') 
+                        img(src="../img/hammer.png", alt="")
+                    th.border.th-tab(scope='col') 
+                        img(src="../img/delete-button.png", alt="")
+            each db in mutedNote 
+                tbody 
+                    tr 
+                        td.border(scope='row')=db.date.toDateString()
+                        td.border= db.kelganSut
+                        td.border= db.kelganSut
+                        td.border= db.sutNarxi
+                        td.border= db.jir
+                        td.border= db.kimOlibKeldi
+                        td.border= db.perePul
+                        td.border= db.naqdPul
+                        td.border= (db.perePul/db.sutNarxi).toFixed(1)
+                        td.border= (db.naqdPul/3700).toFixed(1)
+                        td.border= (db.kelganSut-db.kelganSut+(db.perePul/db.sutNarxi)+(db.naqdPul/3700)).toFixed(1)
+                        td.border.tdd
+                            a(href="/returnNote/"+db.id)
+                                img(src="../img/settings3.png", alt="")
+                        td.border.tdd 
+                            a(href="/deleteNote/"+db.id)
+                                img(src="../img/remove.png", alt="")
+    else    
+        small.d-block.text-center.text-secondary(style="margin-top: 250px") Not found deletion notes...           

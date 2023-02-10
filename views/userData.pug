@@ -1,0 +1,16 @@
+link(rel="stylesheet", href="../css/adminView.css")
+//- user data body
+each db in userData
+    div.card
+        .contener(data-bs-toggle="tooltip" data-bs-placement="right" title=`This user ${db.username+" "+db.lastname}`) &nbsp;
+        .contener_txt
+            .name=db.username+" "+db.lastname
+            .add 
+              small.text-secondary=db.email
+              br
+              small.text-secondary=db.login
+              br    
+              small.text-secondary=db.region
+              a(href="/admin/delete/user/"+db.id)  
+                img.user-icon(src="../img/delete-user.png", alt="" data-bs-toggle="tooltip" data-bs-placement="right" title=`Remove ${db.username+" "+db.lastname}`)
+                //- i(id='user-icon').fa-solid.fa-user-minus

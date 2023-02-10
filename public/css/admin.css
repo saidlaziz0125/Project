@@ -1,0 +1,104 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body{
+	background: url("../img/index.jpg") no-repeat center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.container{
+	width: 500px;
+	height: 400px;
+	margin: 0px auto;
+	margin-top: 100px;
+	text-align: center;
+	background-color: rgba(95, 158, 160, 0.43);
+}
+
+.container img{
+	width: 120px;
+	height: 120px;
+	margin-top:-50px;
+	margin-bottom: 50px;
+}
+
+.input-box {
+    display: flex;
+    justify-content:center
+}
+input {
+    margin-left: 5px;
+}
+
+ion-icon {
+    margin-right: 5px;
+    color: orange;
+    font-size: 25px;
+    transform: translateY(5px);
+}
+
+i {
+	margin-right: 5px;
+    color: orange;
+    font-size: 25px;
+    transform: translateY(5px);	
+}
+
+input[type="text"],input[type="password"]{
+	width: 250px;
+	height: 30px;
+	margin-bottom: 30px;
+	padding-left:  30px;
+	font-size: 18px;
+    color: #315370;
+    /* color: #d67731; */
+    outline: none;
+}
+.submit_btn{
+	background-color:#d67731;
+	font-size: 18px;
+    color: #315370;
+	padding:10px 30px;
+	border: none;
+	letter-spacing: 2px;
+	transition: background-color .2s;
+	margin-bottom: 10px;
+    border-radius: none;
+}
+
+.submit_btn ion-icon {
+	color: #315370;
+	padding-left: 5px;
+}
+
+.submit_btn:hover{
+	background-color:#f78837;
+	cursor: pointer;
+}
+
+
+.error_small {
+	color: white;
+	font-family: system-ui;
+	font-size: 16px;
+	background: #dc143cd5;
+	padding: 10px 0;
+	position: relative;
+	top: -30px;
+	display: block;
+	margin: auto;
+}
+
+.error_small::after {
+	content: "";
+	border: 15px solid;
+	border-color: #dc143cd5 transparent transparent transparent;
+	position: absolute;
+	left: 230px;
+	top: 44px;
+}
+

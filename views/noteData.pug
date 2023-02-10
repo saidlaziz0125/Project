@@ -1,0 +1,47 @@
+form(action="/noteData")
+    input(type="date" name="from_date")
+    br
+    input(type="date" name="to_date")
+    button.btn(type="submit") Qidirish
+each db in noteData 
+    h3.text-center.my-3=db.ferma+" fermasi"
+table.bg-light.table.mt-2(style='width: 1366px')
+    thead
+        tr 
+            th.border.th-tab(scope='col') Sana 
+            th.border.th-tab(scope='col') ostatka qarz
+            th.border.th-tab(scope='col') Kelgan sut
+            th.border.th-tab(scope='col') Sut narxi
+            th.border.th-tab(scope='col') Jir
+            th.border.th-tab(scope='col') Kim Olib keldi
+            th.border.th-tab(scope='col') perech. pul
+            th.border.th-tab(scope='col') Naqd pul
+            th.border.th-tab(scope='col') perech. litr
+            th.border.th-tab(scope='col') Naqd litr
+            th.border.th-tab(scope='col') Ostatka
+            th.border.th-tab(scope='col') 
+                img(src="../img/hammer.png", alt="")
+            th.border.th-tab(scope='col') 
+                img(src="../img/delete-button.png", alt="")
+    each db in noteData 
+        tbody 
+            tr 
+                td.border(scope='row')=db.date.toDateString()
+                td.border= db.kelganSut
+                td.border= db.kelganSut
+                td.border= db.sutNarxi
+                td.border= db.jir
+                td.border= db.kimOlibKeldi
+                td.border= db.perePul
+                td.border= db.naqdPul
+                td.border= (db.perePul/db.sutNarxi).toFixed(1)
+                td.border= (db.naqdPul/3700).toFixed(1)
+                td.border= (db.kelganSut-db.kelganSut+(db.perePul/db.sutNarxi)+(db.naqdPul/3700)).toFixed(1)
+                td.border.tdd
+                    a(href="/note/settings/"+db.id)
+                        //- ion-icon(name='hammer') 
+                        img(src="../img/settings3.png", alt="")
+                td.border.tdd 
+                    a(href="/note/delete/"+db.id)
+                        //- ion-icon(name='trash') 
+                        img(src="../img/remove.png", alt="")

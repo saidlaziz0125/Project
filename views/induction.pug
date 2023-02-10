@@ -1,0 +1,26 @@
+link(rel="stylesheet", href="../css/induction.css")
+//- induction body
+if(errors) 
+    each error in errors 
+        .alert.alert-danger.alert-dismissible.fade.show.mt-3#alert-js(role='alert')
+            p= error.msg
+            button.btn-close(type='button' data-bs-dismiss='alert' aria-label='Close')
+form.form-user(method="POST")
+    .mb-3.group-img1 
+        img(src="/img/man.png", alt="")
+    .mb-3.signupInput
+        input.py-3(type='text' placeholder="Username" name="username")
+    .mb-3.signupInput
+        input.py-3(type='text' placeholder="Lastname" name="lastname")
+    .mb-3.signupInput
+        input.py-3(type='text' placeholder="Email" name="email")
+    .mb-3.signupInput
+        input.py-3(type='text' placeholder="Login" name="login")
+    .mb-3.signupInput
+        input.py-3(type='text' placeholder="Joy nomi" name="region")
+    .mb-3.signupInput
+        input.py-3(type='text' placeholder="Password" name="password")
+    .mb-3.signupInput
+        input.py-3(type='text' placeholder="Password 2" name="password2")
+    .mt-3
+        button.btn.btn-form.signupBtn.py-2(type="submit") Create

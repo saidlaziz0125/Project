@@ -1,0 +1,32 @@
+include links 
+link(rel="stylesheet", href="/css/userNote.css")
+body 
+    h2.text-center.my-3= txt 
+    .container 
+        if(data)
+            table.table.mt-2.table-hover
+                thead 
+                    tr.border 
+                        th.border.th-tab(scope='col') Ferma nomi
+                        th.border.th-tab(scope='col') Kelgan sut
+                        th.border.th-tab(scope='col') Jir
+                        th.border.th-tab(scope='col') Kim Olib keldi
+                        th.border.th-tab(scope='col') Pul o'tdi
+                        th.border.th-tab(scope='col') naqd berildi
+                        th.border.th-tab(scope='col') Sut narxi
+                        th.border.th-tab(scope='col') Sana
+                        th.border.th-tab(scope='col') Sozla
+                each db in data 
+                    tbody 
+                        tr 
+                            td.border.user-td(scope='row')= db.notes.ferma
+                            td.border.user-td=db.notes.kelganSut 
+                            td.border.user-td=db.notes.jir 
+                            td.border.user-td=db.notes.kimOlibKeldi 
+                            td.border.user-td=db.notes.perePul 
+                            td.border.user-td=db.notes.naqdPul 
+                            td.border.user-td=db.notes.sutNarxi
+                            td.border.user-td=db.notes.date.toDateString() 
+                            td.border.user-td.set-td(setGo='/user/settingNote/'+db.notes.id)
+                                a(href="/user/settingNote/"+db.notes._id)
+                                    ion-icon(name="hammer") 

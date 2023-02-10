@@ -1,0 +1,18 @@
+#offcanvasRight.offcanvas.offcanvas-end(tabindex='-1' aria-labelledby='offcanvasRightLabel' style='width:23%')
+  .offcanvas-header
+    h5#offcanvasRightLabel= data.username
+    button.btn-close.text-reset(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
+  .offcanvas-body
+    ul.off-ul 
+      li.off-li 
+        //- i.fa-solid.fa-circle-plus
+        img(src="../img/add.png", alt="")
+        a.off-a(href="/dayAdd/"+data.id) Kundalik qo'shish
+      li.off-li 
+        img(src="../img/views.png", alt="")
+        //- i.fa-solid.fa-rectangle-list
+        a.off-a(href="/dayAdd/view/"+data.id) Kundalikni ko'rish
+      li.off-li 
+        img(src="../img/delete-user.png", alt="")
+        //- i.fa-solid.fa-right-from-bracket
+        a.off-a(href="/delete/user/"+data.id) Profilni o'chirish
